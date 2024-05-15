@@ -9,7 +9,7 @@ namespace Реализация_QTE
         static int QTE()
         {
 
-            char[] all = { 'A', 'S', 'D', 'F', 'G' };
+            char[] all = { 'A', 'S', 'D', 'F', 'G', 'Q', 'W', 'E', 'R' };
             
             Random rnd = new Random();
             int s = rnd.Next(3, 6);
