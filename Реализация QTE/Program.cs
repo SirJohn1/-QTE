@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-
+using System;
+using static System.Console;
 namespace Реализация_QTE
 {
     interface IRobbery
