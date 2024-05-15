@@ -61,6 +61,7 @@ namespace Реализация_QTE
         static void Main(string[] args)
         {
             Console.Write(QTE());
+            //тест
 
         }
     }
