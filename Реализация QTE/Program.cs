@@ -111,7 +111,7 @@ namespace Реализация_QTE
             Story_1();
             StoryLines.StoryLine();
             
-            
+
         }
     }
 }
