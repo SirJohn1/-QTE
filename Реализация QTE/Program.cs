@@ -67,7 +67,7 @@ namespace Реализация_QTE
 
     internal class Program
     {
-        public static void Story()
+        public static void Story_1()
         {
             WriteLine("11 Апреля. 2004 год. Город мать его Saint Santoss. ул. Sanino. Дом 1488. \n");
             WriteLine("Dallas: Эх, задалбало меня это все, одни проблемы на носу, долги, с женой проблемы, так еще и эта передряга с бандитами, как хочется спокойной жизни");
@@ -108,6 +108,7 @@ namespace Реализация_QTE
         {
             
             //тест
+            Story_1();
             StoryLines.StoryLine();
             
             
