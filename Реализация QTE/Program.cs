@@ -106,8 +106,10 @@ namespace Реализация_QTE
 
         static void Main(string[] args)
         {
-            
-            //тест
+            Pablo pablo = new Pablo("Пабло",true, true, true);
+            Chikatalo chikatalo = new Chikatalo("Чакатало", true, true, true);
+            pablo.PrintHaracteristick();
+            chikatalo.PrintHaracteristick();
             Story_1();
             StoryLines.StoryLine();
             
