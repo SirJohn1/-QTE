@@ -7,7 +7,7 @@ namespace Реализация_QTE
     internal class Program
     {
 
-        static int QTE()
+        static int QTE(int timer)
         {
             char[] all = { 'A', 'S', 'D', 'F', 'G', 'Q', 'W', 'E', 'R' };
 
@@ -30,7 +30,7 @@ namespace Реализация_QTE
             Array.Sort(Qte);
 
             
-            int timeLimit = 10;
+            int timeLimit = timer;
             var stopwatch = new Stopwatch();
 
             Console.Write("Введите буквы через пробел:");
@@ -91,7 +91,7 @@ namespace Реализация_QTE
 
         static void Main(string[] args)
         {
-            Console.Write(QTE());
+            Console.Write(QTE(10));
             //тест
 
         }
