@@ -12,7 +12,7 @@ namespace Реализация_QTE
         public bool Body { get; set; }
         public void PrintHaracteristick();
     };
-
+    //коммит
     class Pablo : IRobbery
     {
         public string Name { get; set; }
@@ -105,62 +105,13 @@ namespace Реализация_QTE
 
             // у меня вообще есть идея, о начале разговора в прицнипе, короче то что вот эти имена это их прозвища, короче типа они сидели дома, у одного там проблемы долги по горло и тд, и он второму предложил идею ограбить что нибудь, ну или второму в инете письмо пришло о предложении
         }
-        static int QTE()
-        {
-
-            char[] all = { 'A', 'S', 'D', 'F', 'G' };
-            
-            Random rnd = new Random();
-            int s = rnd.Next(3, 6);
-            char[] Qte = new char[s];
-
-            for (int i= 0; i< Qte.Length; i++)
-            {
-               Qte[i] = all[rnd.Next(0, all.Length)];
-            }
-            
-            Write("Случайные символы:");
-            for (int i = 0; i < Qte.Length; i++)
-            {
-                Write(Qte[i]+ " ");
-            }
-            WriteLine();
-            Array.Sort(Qte);
-            Write("Введите буквы через пробел:");
-            string input = ReadLine();
-
-
-            string[] AsString = input.Split(' ');
-
-
-            char[] userInput = new char[AsString.Length];
-            for (int i = 0; i < AsString.Length; i++)
-            {
-                if (char.TryParse(AsString[i].Trim(), out char number))
-                {
-                    userInput[i] = number;
-                }
-            }
-
-
-            Array.Sort(userInput);
-            int count= 0;
-            for (int i = 0; i < Qte.Length; i++)
-            {
-                if (!EqualityComparer<char>.Default.Equals(Qte[i], userInput[i]))
-                {
-                    count++; 
-                }
-            }
-            return count;
-
-        }
+        
 
         
 
         static void Main(string[] args)
         {
-            Write(QTE());
+            
             //тест
             StoryLines.StoryLine();
             
