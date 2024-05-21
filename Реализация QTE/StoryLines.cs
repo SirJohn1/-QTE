@@ -170,7 +170,7 @@ namespace Реализация_QTE
                     Thread.Sleep(5000);
                     gold();
                     Program.Story_Final();
-                    break;
+                break;
                 case 2:
                     timer = 10;
                 break;
@@ -205,7 +205,7 @@ namespace Реализация_QTE
                     Thread.Sleep(5000);
                     gold();
                     Program.Story_Final();
-                    break;
+                break;
             }
 
 
