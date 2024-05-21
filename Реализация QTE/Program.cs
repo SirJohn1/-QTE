@@ -40,7 +40,7 @@ namespace Реализация_QTE
                 }
                 else
                 {
-                    return "Повреждена";
+                    return "Повреждение";
                 }
             };
             WriteLine("\n-==ВЫ==-");
@@ -56,6 +56,35 @@ namespace Реализация_QTE
             this.Legs = Legs;
             this.Head = Head;
             this.Body = Body;
+        }
+        public void ZXC(int n)
+        {
+            if (n > 0)
+            {
+                Random rnd = new Random();
+                int shot = rnd.Next(0,n);
+                Func< int, bool> shoting = (x) =>
+                {
+                    if (x  == 0 || Body == false && Legs == false)
+                    {
+                        return Head = false;
+                    }
+                    if (x == 1)
+                    {
+                        return Legs=false;
+                    }
+                    else 
+                    {
+                        return Body=false;
+                    }
+                };
+                if(shot > 0)
+                {
+                   shot = rnd.Next(0,3);
+                   shoting(shot);
+                }
+            }
+            
         }
     };
 
@@ -230,6 +259,8 @@ namespace Реализация_QTE
             pablo.PrintHaracteristick();
             chikatalo.PrintHaracteristick();
             Story_1();
+            pablo.ZXC(6);
+            pablo.PrintHaracteristick();
             StoryLines.StoryLine();
             
 
