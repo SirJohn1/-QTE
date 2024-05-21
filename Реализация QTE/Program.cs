@@ -57,20 +57,24 @@ namespace Реализация_QTE
             this.Head = Head;
             this.Body = Body;
         }
-        public void ZXC(int n)
+        public void ZXC(int n, Chikatalo bro)
         {
             if (n > 0)
             {
                 Random rnd = new Random();
-                int shot = rnd.Next(0,n);
-                Func< int, bool> shoting = (x) =>
+                int shot = rnd.Next(0, n);
+                Func<int, bool> shoting = (x) =>
                 {
-                    if (x  == 0 || Body == false && Legs == false)
+                    if (x == 0 || Body == false && Legs == false)
                     {
-
+                        int tim = rnd.Next(0, 2);
+                        if (tim == 0)
+                        {
+                            bro.Statist = false;
+                        }
                         return Head = false;
                     }
-                    if (x == 1|| Body == false)
+                    if (x == 1 || Body == false)
                     {
                         return Legs=false;
                     }

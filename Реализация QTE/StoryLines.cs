@@ -146,7 +146,7 @@ namespace Реализация_QTE
             WriteLine("Pablo: Ну, как будем грабить? По тихому(1) или прорвёмся(2)?");
             int answ1 = Convert.ToInt32(ReadLine());
             Pablo pablo = new Pablo("Пабло", true, true, true);
-            Chikatalo chikatalo = new Chikatalo("Чакатало", true, true, true);
+            Chikatalo chikatalo = new Chikatalo("Чакатало", true);
             int timer=0;
             switch (answ1)
             {
