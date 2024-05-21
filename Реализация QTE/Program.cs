@@ -120,7 +120,7 @@ namespace Реализация_QTE
             };
             WriteLine("\n-==СОЮЗНИК==-");
             WriteLine($"Имя: {Name}");
-            WriteLine($"Состаяние: {Zov= triefalse(Statist)}");
+            WriteLine($"Состаяние: {Zov= triefalse(Statist)}\n");
         }
 
         public Chikatalo(string Name, bool Statist)
@@ -303,11 +303,10 @@ namespace Реализация_QTE
         {
             Music();
             Pablo pablo = new Pablo("Пабло",true, true, true);
-            Chikatalo chikatalo = new Chikatalo("Чакатало", true);
-            pablo.PrintHaracteristick();
-            chikatalo.PrintHaracteristick();
+            Chikatalo chikatalo = new Chikatalo("Чакатало", true); 
             Story_1();
-            pablo.ZXC(6);
+            Thread.Sleep(5000);
+            pablo.ZXC(6, chikatalo);
             pablo.PrintHaracteristick();
             StoryLines.StoryLine();
             
