@@ -21,6 +21,23 @@ namespace Реализация_QTE
             }
 
             switch (s) {
+                case 3:
+                    Console.WriteLine($@"
+         ...                 ...                 ...
+        : {Qte[0]} :               : {Qte[1]} :               : {Qte[2]} :
+         : :                 : :                 : :
+      ..    ..            ..    ..            ..    ..
+      :      :            :      :            :      :
+     : -.   = :          : -.   = :          : -.   = :
+   ....:    :....      ....:    :....      ....:    :....
+   -=: : .. : .-=      -=: : .. : .-=      -=: : .. : .-=
+       : :: :              : :: :              : :: :
+       : : .:              : : .:              : : .:
+       : . :.              : . :.              : . :.
+       ::  ::              ::  ::              ::  ::
+       ::  ::              ::  ::              ::  ::
+");
+                    break;
                 case 4:
             Console.WriteLine($@"
          ...                 ...                 ...                 ...
@@ -113,9 +130,10 @@ namespace Реализация_QTE
 
             Array.Sort(userInput);
             int count = 0;
+            
             for (int i = 0; i < Qte.Length; i++)
             {
-                if (!EqualityComparer<char>.Default.Equals(Qte[i], userInput[i]))
+                if (userInput.Length < Qte.Length|| !EqualityComparer<char>.Default.Equals(Qte[i], userInput[i]))
                 {
                     count++;
                 }
