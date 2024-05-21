@@ -353,11 +353,9 @@ namespace Реализация_QTE
             //Music();
             Pablo pablo = new Pablo("Пабло",true, true, true,1);
             Chikatalo chikatalo = new Chikatalo("Чакатало", true);
-            //Story_1();
-            //Thread.Sleep(5000);
-            Console.WriteLine(pablo.ZXC(6, chikatalo));
-            pablo.PrintHaracteristick();
-            //StoryLines.StoryLine();
+            
+            //Console.WriteLine(pablo.ZXC(6, chikatalo));
+            StoryLines.StoryLine();
             
 
         }

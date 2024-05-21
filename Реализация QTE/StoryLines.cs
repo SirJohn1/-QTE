@@ -141,38 +141,71 @@ namespace Реализация_QTE
 -%++%@#*@#=--::-=-=@@@@#%@%%%####*@@@@:.::@@.....@#@.%%%%%%+---:-------+%%@@@@@-.....::::::::...@@@@##%%%%%%%%=
 :=:-*:-+::::::::::::::::-*--:::::.....+%:....:#......:.........................:-:............%@@::::-:------=:");
 
-            Bank();
-            //выносим охрану на входе
-            WriteLine("Pablo: Ну, как будем грабить? По тихому(1) или прорвёмся(2)?");
-            int answ1 = Convert.ToInt32(ReadLine());
-            Pablo pablo = new Pablo("Пабло", true, true, true, 1);
+            Pablo pablo = new Pablo("Пабло", true, false, true, 1);
+
             Chikatalo chikatalo = new Chikatalo("Чакатало", true);
-            int timer=0;
-            switch (answ1)
+            int timer = 0;
+
+
+
+            for (; pablo.Head==false; )
             {
-                case 1:
-                    timer = 15;
-                break;
-                case 2:
-                    timer = 10;
-                    
-                break;
+                pablo.Head = true;
+                Program.Story_1();
+                Thread.Sleep(5000);
+                Bank();
+                //выносим охрану на входе
+                WriteLine("Pablo: Ну, как будем грабить? По тихому(1) или прорвёмся(2)?");
+                int answ1 = Convert.ToInt32(ReadLine());
+                
+                switch (answ1)
+                {
+                    case 1:
+                        timer = 15;
+                        break;
+                    case 2:
+                        timer = 10;
+
+                        break;
+                }
+
+
+                //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
+                
+            }
+            pablo.Head = false;
+
+
+
+            for (; pablo.Head == false;)
+            {
+                pablo.Head = true;
+                Program.Story_2();
+                Thread.Sleep(5000);
+
+                //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
+
+                pablo.PrintHaracteristick();
+                chikatalo.PrintHaracteristick();
+            }
+            pablo.Head = false;
+
+            for (; pablo.Head == false;)
+            {
+                pablo.Head = true;
+                Thread.Sleep(5000);
+                interBank();
+                Program.Story_3();
+                Thread.Sleep(5000);
+                
+
+                //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
+
+                pablo.PrintHaracteristick();
+                chikatalo.PrintHaracteristick();
             }
 
 
-            //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
-            Program.Story_2();
-            Thread.Sleep(5000);
-            //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
-            pablo.PrintHaracteristick();
-            chikatalo.PrintHaracteristick();
-            Thread.Sleep(5000);
-            Program.Story_3();
-            Thread.Sleep(5000);
-            interBank();
-            //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
-            pablo.PrintHaracteristick();
-            chikatalo.PrintHaracteristick();
             Thread.Sleep(5000);
             gold();
             Program.Story_Final();
