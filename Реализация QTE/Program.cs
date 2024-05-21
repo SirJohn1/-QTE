@@ -22,6 +22,8 @@ namespace Реализация_QTE
         public bool Head { get; set; }
         public bool Body { get; set; }
 
+        public int Heal {  get; set; }
+
         public void PrintHaracteristick()
         {
             string Zov;
@@ -51,14 +53,15 @@ namespace Реализация_QTE
             WriteLine($"Тело: {Zov = triefalse(Body,2)}");
         }
 
-        public Pablo(string Name, bool Legs, bool Head, bool Body)
+        public Pablo(string Name, bool Legs, bool Head, bool Body,int Heal)
         {
             this.Name = Name;
             this.Legs = Legs;
             this.Head = Head;
             this.Body = Body;
+            this.Heal = Heal;
         }
-        public void ZXC(int n, Chikatalo bro)
+        public bool ZXC(int n, Chikatalo bro)
         {
             if (n > 0)
             {
@@ -71,13 +74,59 @@ namespace Реализация_QTE
                         int tim = rnd.Next(0, 2);
                         if (tim == 0)
                         {
-                            bro.Statist = false;
+                            Console.WriteLine("*Chikatalo выпрыгнул я поймал пулю прикрывая тебя");
+
+                            if (Heal > 0)
+                            {
+                                Console.WriteLine("*Оперативно достав аптечку из сумки, ты выличил Chikatalo");
+                                bro.Statist = true;
+                                Heal = 0;
+                                return Head = true;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Хилок не оказалось...");
+                                bro.Statist = false;
+                                return Head = true;
+                            }
                         }
-                        return Head = false;
+                        else
+                        {
+                            return Head = false;
+                        }
                     }
                     if (x == 1 || Body == false)
                     {
-                        return Legs=false;
+
+                        Console.WriteLine("Pablo:Аааа. Черт, мне попали в колено... О стелсе можно забыть");
+                        Console.WriteLine("Pablo:Наверно нужо подлечится... В слудующий раз мне может не повезти");
+                        Console.WriteLine("Использовать аптечку(1-да), но учтите, она еще может понадобиться:");
+                        char vib = char.Parse(Console.ReadLine());
+                        switch (vib)
+                        {
+                            case '1':
+                                if (Heal > 0)
+                                {
+                                    Console.WriteLine("*Оперативно достав аптечку из сумки, ты выличил ногу");
+                                    Heal = 0;
+                                    return Legs = true;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Хилок не оказалось...");
+                                    return Legs = true;
+                                }
+
+                                break;
+
+                            default:
+
+                                return Legs = false;
+                                
+                                break;
+                        
+                        }  
+                    
                     }
                     else 
                     {
@@ -87,10 +136,10 @@ namespace Реализация_QTE
                 if(shot > 0)
                 {
                    shot = rnd.Next(0,3);
-                   shoting(shot);
+                   return shoting(shot);
                 }
             }
-            
+            return Head= true;
         }
     };
 
@@ -301,14 +350,14 @@ namespace Реализация_QTE
         }
         static void Main(string[] args)
         {
-            Music();
-            Pablo pablo = new Pablo("Пабло",true, true, true);
-            Chikatalo chikatalo = new Chikatalo("Чакатало", true); 
-            Story_1();
-            Thread.Sleep(5000);
-            pablo.ZXC(6, chikatalo);
+            //Music();
+            Pablo pablo = new Pablo("Пабло",true, true, true,1);
+            Chikatalo chikatalo = new Chikatalo("Чакатало", true);
+            //Story_1();
+            //Thread.Sleep(5000);
+            Console.WriteLine(pablo.ZXC(6, chikatalo));
             pablo.PrintHaracteristick();
-            StoryLines.StoryLine();
+            //StoryLines.StoryLine();
             
 
         }
