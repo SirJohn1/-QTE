@@ -145,34 +145,46 @@ namespace Реализация_QTE
             //выносим охрану на входе
             WriteLine("Pablo: Ну, как будем грабить? По тихому(1) или прорвёмся(2)?");
             int answ1 = Convert.ToInt32(ReadLine());
-
-            switch(answ1)
+            Pablo pablo = new Pablo("Пабло", true, true, true);
+            Chikatalo chikatalo = new Chikatalo("Чакатало", true, true, true);
+            switch (answ1)
             {
                 case 1:
-                   
+
                     // +времени к таймеру на ввод символов
                     //QTE
-                    //вывод состояния
-                    
-
-                    break;
+                    Program.Story_2();
+                    //QTE
+                    pablo.PrintHaracteristick();
+                    chikatalo.PrintHaracteristick();
+                    Program.Story_3();
+                    interBank();
+                    //QTE
+                    pablo.PrintHaracteristick();
+                    chikatalo.PrintHaracteristick();
+                    gold();
+                    Program.Story_Final();
+                break;
                 case 2:
                     
+                    Program.Story_2();
                     //QTE
-                    //вывод состояния
-
-                    break;
+                    pablo.PrintHaracteristick();
+                    chikatalo.PrintHaracteristick();
+                    Program.Story_3();
+                    interBank();
+                    //QTE
+                    pablo.PrintHaracteristick();
+                    chikatalo.PrintHaracteristick();
+                    gold();
+                    Program.Story_Final();
+                break;
             }
-            //След диалоги и локация после килов 
-            interBank();
-            //QTE
-            //вывод состояния
-            //диалог внутри банка
-            gold();
-            //QTE
-            //вывод состояния
-            //диалог внутри хранилища
-            //их ловят
+            
+            
+            
+            
+            
 
 
         }
