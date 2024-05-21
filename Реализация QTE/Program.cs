@@ -23,11 +23,31 @@ namespace Реализация_QTE
 
         public void PrintHaracteristick()
         {
-            WriteLine("-==ВЫ==-");
+            string Zov;
+            Func<bool,int, string> triefalse = (x,y) =>
+            {
+                if (x == true && y == 1)
+                {
+                    return "Цела";
+                }
+                if (x == true && y == 0)
+                {
+                    return "Целы";
+                }
+                if (x == true && y == 2)
+                {
+                    return "Цело";
+                }
+                else
+                {
+                    return "Повреждена";
+                }
+            };
+            WriteLine("\n-==ВЫ==-");
             WriteLine($"Имя: {Name}");
-            WriteLine($"Ноги: {Legs}");
-            WriteLine($"Голова: {Head}");
-            WriteLine($"Тело: {Body}");
+            WriteLine($"Ноги: {Zov = triefalse(Legs,0)}");
+            WriteLine($"Голова: {Zov = triefalse(Head,1)}");
+            WriteLine($"Тело: {Zov = triefalse(Body,2)}");
         }
 
         public Pablo(string Name, bool Legs, bool Head, bool Body)
@@ -49,11 +69,31 @@ namespace Реализация_QTE
 
         public void PrintHaracteristick()
         {
+            string Zov;
+            Func<bool, int, string> triefalse = (x, y) =>
+            {
+                if (x == true && y == 1)
+                {
+                    return "Цела";
+                }
+                if (x == true && y == 0)
+                {
+                    return "Целы";
+                }
+                if (x == true && y == 2)
+                {
+                    return "Цело";
+                }
+                else
+                {
+                    return "Повреждена";
+                }
+            };
             WriteLine("\n-==СОЮЗНИК==-");
             WriteLine($"Имя: {Name}");
-            WriteLine($"Ноги: {Legs}");
-            WriteLine($"Голова: {Head}");
-            WriteLine($"Тело: {Body}");
+            WriteLine($"Ноги: {Zov= triefalse(Legs,0)}");
+            WriteLine($"Голова: {Zov= triefalse(Head,1)}");
+            WriteLine($"Тело: {Zov= triefalse(Body,2)}");
         }
 
         public Chikatalo(string Name, bool Legs, bool Head, bool Body)
@@ -69,6 +109,8 @@ namespace Реализация_QTE
     {
         public static void Story_1()
         {
+            WriteLine();
+            WriteLine();
             WriteLine("11 Апреля. 2004 год. Город мать его Saint Santoss. ул. Sanino. Дом 1488. \n");
             WriteLine("Dallas: Эх, задалбало меня это все, одни проблемы на носу, долги, с женой проблемы, так еще и эта передряга с бандитами, как хочется спокойной жизни");
             WriteLine("Sokol: Да братан, сам тебя понимаю, меня так вообще из дома выгнали, не на одну работу вообще не берут, в общем встряли мы с тобой ");
