@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using System;
 using static System.Console;
 namespace Реализация_QTE
@@ -133,6 +134,55 @@ namespace Реализация_QTE
 
     internal class Program
     {
+        public static void Music()
+        {
+            Beep(784, 150);
+            Thread.Sleep(300);
+            Beep(784, 150);
+            Thread.Sleep(300);
+            Beep(932, 150);
+            Thread.Sleep(150);
+            Beep(1047, 150);
+            Thread.Sleep(150);
+            Beep(784, 150);
+            Thread.Sleep(300);
+            Beep(784, 150);
+            Thread.Sleep(300);
+            Beep(699, 150);
+            Thread.Sleep(150);
+            Beep(740, 150);
+            Thread.Sleep(150);
+            Beep(784, 150);
+            Thread.Sleep(300);
+            Beep(784, 150);
+            Thread.Sleep(300);
+            Beep(932, 150);
+            Thread.Sleep(150);
+            Beep(1047, 150);
+            Thread.Sleep(150);
+            Beep(784, 150);
+            Thread.Sleep(300);
+            Beep(784, 150);
+            Thread.Sleep(300);
+            Beep(699, 150);
+            Thread.Sleep(150);
+            Beep(740, 150);
+            Thread.Sleep(150);
+            Beep(932, 150);
+            Beep(784, 150);
+            Beep(587, 1200);
+            Thread.Sleep(75);
+            Beep(932, 150);
+            Beep(784, 150);
+            Beep(554, 1200);
+            Thread.Sleep(75);
+            Beep(932, 150);
+            Beep(784, 150);
+            Beep(523, 1200);
+            Thread.Sleep(150);
+            Beep(466, 150);
+            Beep(523, 150);
+        } 
         public static void Story_1()
         {
             WriteLine();
@@ -251,6 +301,7 @@ namespace Реализация_QTE
         }
         static void Main(string[] args)
         {
+            Music();
             Pablo pablo = new Pablo("Пабло",true, true, true);
             Chikatalo chikatalo = new Chikatalo("Чакатало", true);
             pablo.PrintHaracteristick();

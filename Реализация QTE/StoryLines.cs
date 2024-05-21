@@ -152,6 +152,24 @@ namespace Реализация_QTE
             {
                 case 1:
                     timer = 15;   
+
+                    // +времени к таймеру на ввод символов
+                    //QTE
+                    Program.Story_2();
+                    Thread.Sleep(5000);
+                    //QTE
+                    pablo.PrintHaracteristick();
+                    chikatalo.PrintHaracteristick();
+                    Thread.Sleep(5000);
+                    Program.Story_3();
+                    Thread.Sleep(5000);
+                    interBank();
+                    //QTE
+                    pablo.PrintHaracteristick();
+                    chikatalo.PrintHaracteristick();
+                    Thread.Sleep(5000);
+                    gold();
+                    Program.Story_Final();
                 break;
                 case 2:
                     timer = 10;
@@ -172,6 +190,28 @@ namespace Реализация_QTE
             Program.Story_Final();
 
 
+                    Program.Story_2();
+                    Thread.Sleep(5000);
+                    //QTE
+                    pablo.PrintHaracteristick();
+                    chikatalo.PrintHaracteristick();
+                    Thread.Sleep(5000);
+                    Program.Story_3();
+                    Thread.Sleep(5000);
+                    interBank();
+                    //QTE
+                    pablo.PrintHaracteristick();
+                    chikatalo.PrintHaracteristick();
+                    Thread.Sleep(5000);
+                    gold();
+                    Program.Story_Final();
+                break;
+            }
+            
+            
+            
+            
+            
 
 
         }
