@@ -168,13 +168,6 @@ namespace Реализация_QTE
                 }
 
 
-                //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
-                
-            
-            pablo.Head = false;
-
-
-
             for (; pablo.Head == false;)
             {
                 pablo.Head = true;
