@@ -67,6 +67,7 @@ namespace Реализация_QTE
                 {
                     if (x  == 0 || Body == false && Legs == false)
                     {
+
                         return Head = false;
                     }
                     if (x == 1|| Body == false)
@@ -96,41 +97,33 @@ namespace Реализация_QTE
         public bool Head { get; set; }
         public bool Body { get; set; }
 
+        public bool Statist { get; set; }
+
         public void PrintHaracteristick()
         {
             string Zov;
-            Func<bool, int, string> triefalse = (x, y) =>
+            Func<bool, string> triefalse = (x) =>
             {
-                if (x == true && y == 1)
+                if (x == true )
                 {
-                    return "Цела";
-                }
-                if (x == true && y == 0)
-                {
-                    return "Целы";
-                }
-                if (x == true && y == 2)
-                {
-                    return "Цело";
+                    return "Здоров";
                 }
                 else
                 {
-                    return "Повреждена";
+                    return "При Смерти";
                 }
             };
             WriteLine("\n-==СОЮЗНИК==-");
             WriteLine($"Имя: {Name}");
-            WriteLine($"Ноги: {Zov= triefalse(Legs,0)}");
-            WriteLine($"Голова: {Zov= triefalse(Head,1)}");
-            WriteLine($"Тело: {Zov= triefalse(Body,2)}");
+            WriteLine($"Голова: {Zov= triefalse(Statist)}");
         }
 
-        public Chikatalo(string Name, bool Legs, bool Head, bool Body)
+        public Chikatalo(string Name, bool Statist)
         {
             this.Name = Name;
-            this.Legs = Legs;
-            this.Head = Head;
-            this.Body = Body;
+            
+            this.Statist = Statist;
+            
         }
     };
 
@@ -255,7 +248,7 @@ namespace Реализация_QTE
         static void Main(string[] args)
         {
             Pablo pablo = new Pablo("Пабло",true, true, true);
-            Chikatalo chikatalo = new Chikatalo("Чакатало", true, true, true);
+            Chikatalo chikatalo = new Chikatalo("Чакатало", true);
             pablo.PrintHaracteristick();
             chikatalo.PrintHaracteristick();
             Story_1();
