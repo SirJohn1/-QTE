@@ -152,48 +152,33 @@ namespace Реализация_QTE
             {
                 case 1:
                     timer = 15;
-
-                    
-                    //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
-                    Program.Story_2();
-                    Thread.Sleep(5000);
-                    //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
-                    pablo.PrintHaracteristick();
-                    chikatalo.PrintHaracteristick();
-                    Thread.Sleep(5000);
-                    Program.Story_3();
-                    Thread.Sleep(5000);
-                    interBank();
-                    //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
-                    pablo.PrintHaracteristick();
-                    chikatalo.PrintHaracteristick();
-                    Thread.Sleep(5000);
-                    gold();
-                    Program.Story_Final();
                 break;
                 case 2:
                     timer = 10;
-                    Program.Story_2();
-                    Thread.Sleep(5000);
-                    //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
-                    pablo.PrintHaracteristick();
-                    chikatalo.PrintHaracteristick();
-                    Thread.Sleep(5000);
-                    Program.Story_3();
-                    Thread.Sleep(5000);
-                    interBank();
-                    //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
-                    pablo.PrintHaracteristick();
-                    chikatalo.PrintHaracteristick();
-                    Thread.Sleep(5000);
-                    gold();
-                    Program.Story_Final();
+                    
                 break;
             }
 
-                    
-               
-            }
+
+            //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
+            Program.Story_2();
+            Thread.Sleep(5000);
+            //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
+            pablo.PrintHaracteristick();
+            chikatalo.PrintHaracteristick();
+            Thread.Sleep(5000);
+            Program.Story_3();
+            Thread.Sleep(5000);
+            interBank();
+            //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
+            pablo.PrintHaracteristick();
+            chikatalo.PrintHaracteristick();
+            Thread.Sleep(5000);
+            gold();
+            Program.Story_Final();
+
+
+        }
 
         }
 
