@@ -147,44 +147,31 @@ namespace Реализация_QTE
             int answ1 = Convert.ToInt32(ReadLine());
             Pablo pablo = new Pablo("Пабло", true, true, true);
             Chikatalo chikatalo = new Chikatalo("Чакатало", true, true, true);
+            int timer=0;
             switch (answ1)
             {
                 case 1:
-
-                    // +времени к таймеру на ввод символов
-                    //QTE
-                    Program.Story_2();
-                    //QTE
-                    pablo.PrintHaracteristick();
-                    chikatalo.PrintHaracteristick();
-                    Program.Story_3();
-                    interBank();
-                    //QTE
-                    pablo.PrintHaracteristick();
-                    chikatalo.PrintHaracteristick();
-                    gold();
-                    Program.Story_Final();
+                    timer = 15;   
                 break;
                 case 2:
-                    
-                    Program.Story_2();
-                    //QTE
-                    pablo.PrintHaracteristick();
-                    chikatalo.PrintHaracteristick();
-                    Program.Story_3();
-                    interBank();
-                    //QTE
-                    pablo.PrintHaracteristick();
-                    chikatalo.PrintHaracteristick();
-                    gold();
-                    Program.Story_Final();
+                    timer = 10;
                 break;
             }
-            
-            
-            
-            
-            
+
+            //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
+            Program.Story_2();
+            //QTE
+            pablo.PrintHaracteristick();
+            chikatalo.PrintHaracteristick();
+            Program.Story_3();
+            interBank();
+            //QTE
+            pablo.PrintHaracteristick();
+            chikatalo.PrintHaracteristick();
+            gold();
+            Program.Story_Final();
+
+
 
 
         }
