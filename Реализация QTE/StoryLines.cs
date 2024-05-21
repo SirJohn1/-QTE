@@ -151,20 +151,20 @@ namespace Реализация_QTE
             switch (answ1)
             {
                 case 1:
-                    timer = 15;   
+                    timer = 15;
 
-                    // +времени к таймеру на ввод символов
-                    //QTE
+                    
+                    //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
                     Program.Story_2();
                     Thread.Sleep(5000);
-                    //QTE
+                    //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
                     pablo.PrintHaracteristick();
                     chikatalo.PrintHaracteristick();
                     Thread.Sleep(5000);
                     Program.Story_3();
                     Thread.Sleep(5000);
                     interBank();
-                    //QTE
+                    //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
                     pablo.PrintHaracteristick();
                     chikatalo.PrintHaracteristick();
                     Thread.Sleep(5000);
@@ -173,39 +173,26 @@ namespace Реализация_QTE
                 break;
                 case 2:
                     timer = 10;
-                break;
-            }
-
-            //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
-            Program.Story_2();
-            //QTE
-            pablo.PrintHaracteristick();
-            chikatalo.PrintHaracteristick();
-            Program.Story_3();
-            interBank();
-            //QTE
-            pablo.PrintHaracteristick();
-            chikatalo.PrintHaracteristick();
-            gold();
-            Program.Story_Final();
-
-
                     Program.Story_2();
                     Thread.Sleep(5000);
-                    //QTE
+                    //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
                     pablo.PrintHaracteristick();
                     chikatalo.PrintHaracteristick();
                     Thread.Sleep(5000);
                     Program.Story_3();
                     Thread.Sleep(5000);
                     interBank();
-                    //QTE
+                    //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
                     pablo.PrintHaracteristick();
                     chikatalo.PrintHaracteristick();
                     Thread.Sleep(5000);
                     gold();
                     Program.Story_Final();
                 break;
+            }
+
+                    
+               
             }
 
 
