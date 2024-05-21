@@ -69,7 +69,7 @@ namespace Реализация_QTE
                     {
                         return Head = false;
                     }
-                    if (x == 1)
+                    if (x == 1|| Body == false)
                     {
                         return Legs=false;
                     }
