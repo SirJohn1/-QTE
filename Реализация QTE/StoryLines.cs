@@ -145,12 +145,10 @@ namespace Реализация_QTE
 
             Chikatalo chikatalo = new Chikatalo("Чакатало", true);
             int timer = 0;
+            int hit = 0;
 
 
-
-            for (; pablo.Head==false; )
-            {
-                pablo.Head = true;
+            
                 Program.Story_1();
                 Thread.Sleep(5000);
                 Bank();
@@ -172,7 +170,7 @@ namespace Реализация_QTE
 
                 //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
                 
-            }
+            
             pablo.Head = false;
 
 
@@ -183,11 +181,21 @@ namespace Реализация_QTE
                 Program.Story_2();
                 Thread.Sleep(5000);
 
-                //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
+                if (pablo.Legs == true)
+                {
+
+                }
+                else
+                {
+                    timer = 10;
+                }
+                hit = Program.QTE(timer);
+                pablo.ZXC(hit, chikatalo);
 
                 pablo.PrintHaracteristick();
                 chikatalo.PrintHaracteristick();
             }
+            hit = 0;
             pablo.Head = false;
 
             for (; pablo.Head == false;)
@@ -197,9 +205,18 @@ namespace Реализация_QTE
                 interBank();
                 Program.Story_3();
                 Thread.Sleep(5000);
-                
 
-                //QTE  и проверку на жизнь ног(если проходит то ничего не трогаем, а если нет запускаем с таймером 10)
+
+                if (pablo.Legs == true)
+                {
+
+                }
+                else
+                {
+                    timer = 10;
+                }
+                hit = Program.QTE(timer);
+                pablo.ZXC(hit, chikatalo);
 
                 pablo.PrintHaracteristick();
                 chikatalo.PrintHaracteristick();
