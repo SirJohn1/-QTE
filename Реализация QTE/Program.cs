@@ -115,7 +115,7 @@ namespace Реализация_QTE
             };
             WriteLine("\n-==СОЮЗНИК==-");
             WriteLine($"Имя: {Name}");
-            WriteLine($"Голова: {Zov= triefalse(Statist)}");
+            WriteLine($"Состаяние: {Zov= triefalse(Statist)}");
         }
 
         public Chikatalo(string Name, bool Statist)
